@@ -1,0 +1,390 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  background-color: black;
+  color: white;
+  scroll-behavior: smooth;
+}
+
+button {
+  box-shadow: none !important;
+}
+
+#loading {
+  /*          LOADING COVER                       */
+  z-index: 1000;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 0.5s ease;
+}
+#loading #loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #575757;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 2s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#loading #loadingText {
+  margin-top: 10px;
+  font-size: 2rem;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 400;
+  animation: blink 1s linear infinite;
+}
+@keyframes blink {
+  0% {
+    color: black;
+  }
+  50% {
+    color: white;
+  }
+  100% {
+    color: black;
+  }
+}
+
+#navbar {
+  /*       NAVBAR          */
+}
+#navbar .navbar-container {
+  width: 120px;
+  background-color: #222222;
+  height: 100%;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: 999;
+  margin-left: 0px;
+}
+#navbar .navbar-container a {
+  text-align: center;
+  display: block;
+  color: white;
+  font-size: 14px;
+  transition: 500ms all ease;
+  padding-top: 25px;
+  padding-bottom: 15px;
+}
+#navbar .navbar-container i {
+  display: block;
+  font-size: 40px;
+  background-color: #222222;
+  transition: 500ms all ease;
+  padding-bottom: 10px;
+}
+#navbar .navbar-container a:hover {
+  text-decoration: none;
+  background-color: silver;
+  color: black;
+}
+#navbar .navbar-container a:hover i {
+  background-color: silver;
+  color: black;
+}
+
+/*      KONIEC NAVBARU      */
+#content-wrapper {
+  /*      CONTENT WRAPPER         */
+  margin-left: 27%;
+  margin-right: 5%;
+  max-width: 980px;
+  padding-top: 3%;
+  padding-bottom: 5%;
+  font-family: "Lato", sans-serif;
+}
+#content-wrapper .display-4 {
+  font-size: 20px;
+  padding-top: 20px;
+}
+#content-wrapper hr {
+  width: 250px;
+  background-color: white;
+  opacity: 0.7;
+}
+
+/*  CONTENT WRAPPER - END   */
+.img-navbar {
+  width: 120px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+#header {
+  margin-left: 120px;
+  padding-top: 3%;
+}
+
+#aboutMe {
+  /*      SECTION - ABOUT ME      */
+  font-family: "lato", sans-serif;
+}
+#aboutMe h3 {
+  margin-top: 40px;
+}
+#aboutMe h2 {
+  font-size: 36px;
+}
+#aboutMe #hr2 {
+  width: 250px;
+}
+#aboutMe p {
+  opacity: 0.7;
+}
+#aboutMe .progresstxt {
+  margin-top: 20px;
+  font-size: 18px;
+}
+#aboutMe .progress {
+  height: 30px;
+  border-radius: 0px;
+}
+#aboutMe .progress-bar {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+#aboutMe #resumeDownload {
+  display: block;
+  margin-top: 50px;
+  background-color: white;
+  border-radius: 5px;
+  color: black;
+  width: 220px;
+  padding: 15px;
+  text-align: center;
+  transition: 500ms ease;
+}
+#aboutMe #resumeDownload i {
+  background-color: white;
+  color: black;
+  padding-right: 5px;
+  transition: 500ms ease;
+}
+#aboutMe #resumeDownload:hover {
+  text-decoration: none;
+  background-color: #2e2e2e;
+  color: white;
+}
+#aboutMe #resumeDownload:hover i {
+  background-color: #2e2e2e;
+  color: white;
+}
+
+/*      END OF SECTION - ABOUT ME       */
+#projects {
+  /*      SECTION - PROJECTS          */
+}
+#projects h2 {
+  font-size: 32px;
+  padding-top: 30px;
+}
+#projects hr {
+  width: 30%;
+  background-color: white;
+}
+#projects #arrow {
+  font-size: 32px;
+  margin-left: 5px;
+}
+#projects button {
+  width: 200px;
+}
+#projects button a {
+  font-size: 25px;
+  color: white;
+}
+#projects button a:hover {
+  text-decoration: none;
+  color: white;
+}
+#projects #myGitHub {
+  margin-top: 50px;
+}
+#projects #githubBtn {
+  background-color: white;
+  margin-bottom: 60px;
+}
+#projects #githubBtn a {
+  color: black;
+}
+#projects #githubBtn:hover {
+  background-color: #2e2e2e;
+}
+#projects #githubBtn:hover a {
+  color: white;
+}
+#projects img {
+  filter: brightness(0.7);
+  transition: 500ms ease;
+}
+#projects img:hover {
+  cursor: pointer;
+  filter: brightness(1);
+}
+#projects .projectTxt {
+  position: absolute;
+  top: 6%;
+  left: 5%;
+  text-align: center;
+  font-size: 25px;
+  background-color: rgba(0, 0, 0, 0.836);
+  border-radius: 5px;
+  padding: 4px;
+  border: 1px solid black;
+  opacity: 0;
+  visibility: hidden;
+  transition: 500ms ease;
+}
+#projects .hoverImg {
+  padding: 1px;
+}
+#projects .hoverImg:hover .projectTxt {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*         END OF SECTION - PROJECTS        */
+#contact .contactDetail {
+  display: flex;
+  align-items: center;
+}
+#contact .contactmeTxt {
+  opacity: 0.7;
+  margin-left: 20px;
+  margin-top: 13px;
+}
+#contact i {
+  font-size: 36px;
+}
+#contact #iconMarker {
+  font-size: 48px;
+}
+#contact .getintouch {
+  margin-top: 40px;
+  opacity: 0.7;
+}
+#contact .formgetintouch {
+  padding: 0px;
+}
+#contact button {
+  width: 150px;
+  background-color: white;
+  color: black;
+  font-size: 18px;
+  transition: 500ms ease;
+}
+#contact button:hover {
+  background-color: #2e2e2e;
+  color: white;
+  border-color: #2e2e2e;
+}
+#contact button:hover i {
+  color: white;
+  background-color: #2e2e2e;
+}
+
+#footer {
+  /*      START OF FOOTER SECTION     */
+}
+#footer .footer-container {
+  margin-top: 170px;
+}
+#footer .footer-container i {
+  margin-right: 15px;
+  font-size: 30px;
+  transition: 500ms ease;
+}
+#footer i:hover {
+  font-size: 35px;
+}
+
+/*          END OF FOOTER SECTION           */
+#goTop {
+  /*                GO TOP BUTTON           */
+  display: none;
+}
+#goTop button {
+  position: fixed;
+  z-index: 99;
+  right: 5%;
+  bottom: 5%;
+  font-size: 20px;
+  background-color: white;
+  padding: 0px 10px;
+  padding-bottom: 5px;
+  transition: 500ms ease;
+  color: black;
+  border: 1px solid rgba(0, 0, 0, 0.363);
+}
+
+#goTop:hover button {
+  color: white;
+  background-color: black;
+  border: 1px solid white;
+}
+
+/*  MEDIA      SCREEN       */
+@media screen and (max-width: 600px) {
+  .img-navbar {
+    display: none;
+  }
+
+  #header {
+    margin: 60px auto;
+  }
+
+  #content-wrapper {
+    margin-top: 10px;
+    margin-left: 5%;
+  }
+
+  #navbar .navbar-container {
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    height: auto;
+    display: flex;
+    width: 100%;
+    align-content: center;
+  }
+  #navbar .navbar-container a {
+    color: white;
+    font-size: 16px;
+    transition: 500ms all ease;
+    padding: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+  }
+  #navbar .navbar-container i {
+    display: none;
+  }
+
+  #resumeDownload, #projects button, #sendMessageButton {
+    min-width: 100%;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 1080px) {
+  #content-wrapper {
+    margin-left: 20%;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
