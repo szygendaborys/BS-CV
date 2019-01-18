@@ -99,6 +99,10 @@ button {
   background-color: silver;
   color: black;
 }
+#navbar .navbar-container .active {
+  background-color: silver;
+  color: black;
+}
 
 /*      KONIEC NAVBARU      */
 #content-wrapper {

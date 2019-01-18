@@ -79,7 +79,7 @@ $(document).ready(() => {
         $(".fa-home").css({"background-color": "rgb(34, 34, 34)", "color": "white"});
 
         $("#contactLink").css({"background-color": "rgb(192, 192, 192)", "color": "black"});
-        $(".fa-envelope").css({"background-color": "rgb(192, 192, 192)", "color": "black"});
+        $(".fa-envelope-menu").css({"background-color": "rgb(192, 192, 192)", "color": "black"});
 
         $("#aboutMeLink").css({"background-color": "rgb(34, 34, 34)", "color": "white"});
         $(".fa-user").css({"background-color": "rgb(34, 34, 34)", "color": "white"});
