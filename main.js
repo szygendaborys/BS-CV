@@ -29,7 +29,9 @@ $(document).ready(() => {
 
    function menuCheck() { //Check menu pos and highlight the proper button
     $currentPos = $(window).scrollTop();
+    $aboutMePos = $('#projects').scrollTop();
     console.log($currentPos);
+    console.log($aboutMePos);
 
     if ($currentPos < 235) { //HIGHLIGHT HOME
 
@@ -43,7 +45,7 @@ $(document).ready(() => {
         $(".fa-laptop-code").css({"background-color": "rgb(34, 34, 34)", "color": "white"});
 
         $("#contactLink").css({"background-color": "rgb(34, 34, 34)", "color": "white"});
-        $(".fa-envelope").css({"background-color": "rgb(34, 34, 34)", "color": "white"});
+        $(".fa-envelope-menu").css({"background-color": "rgb(34, 34, 34)", "color": "white"});
 
     } else if ($currentPos >=235 && $currentPos < 1338) {  //HIGHLIGHT ABOUT ME
 
@@ -57,7 +59,7 @@ $(document).ready(() => {
         $(".fa-laptop-code").css({"background-color": "rgb(34, 34, 34)", "color": "white"});
 
         $("#contactLink").css({"background-color": "rgb(34, 34, 34)", "color": "white"});
-        $(".fa-envelope").css({"background-color": "rgb(34, 34, 34)", "color": "white"});
+        $(".fa-envelope-menu").css({"background-color": "rgb(34, 34, 34)", "color": "white"});
 
     } else if ($currentPos >= 1338 && $currentPos <2202) { // HIGHLIGHT PROJECTS
 
@@ -71,7 +73,7 @@ $(document).ready(() => {
         $(".fa-user").css({"background-color": "rgb(34, 34, 34)", "color": "white"});
 
         $("#contactLink").css({"background-color": "rgb(34, 34, 34)", "color": "white"});
-        $(".fa-envelope").css({"background-color": "rgb(34, 34, 34)", "color": "white"});
+        $(".fa-envelope-menu").css({"background-color": "rgb(34, 34, 34)", "color": "white"});
 
     } else {
 
